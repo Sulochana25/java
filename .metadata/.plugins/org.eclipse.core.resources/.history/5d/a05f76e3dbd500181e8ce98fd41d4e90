@@ -1,0 +1,5 @@
+package org.DAOModule;
+
+public class SQLConnection {
+
+}

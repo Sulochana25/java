@@ -1,0 +1,45 @@
+import java.sql.Array;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import com.microsoft.sqlserver.jdbc.*;
+
+import com.microsoft.sqlserver.jdbc.*;
+public class JDBCConnection {
+
+	public static void main(String[] args) {
+	            try
+	            {
+	                SQLServerDataSource ds = new SQLServerDataSource();
+	                ds.setUser("sa");
+	                ds.setPassword("Welcome@1234");
+	                ds.setServerName("GGKU3SER2");
+	                ds.setPortNumber(1433);
+	                ds.setDatabaseName("Sulochana");
+	                Connection con = ds.getConnection();
+	                String sql = "select * from tab;";
+	               Statement s = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+	                ResultSet rs = s.executeQuery(sql);
+	                rs.next();
+	                System.out.println(rs.getInt("id")+" "+rs.getString("name"));
+	                rs.next();
+	                rs.previous();
+	                
+//	                rs.updateInt("id", 7);
+//	                rs.updateRow();
+//	                rs.next();
+//	                rs.updateString("name", "pranay");
+//	                rs.updateRow();
+	                System.out.println("Susccessfully updated");
+	                    rs.close();
+	                    s.close();
+	                    con.close();
+	            } catch (Exception e)
+	            {
+	                e.printStackTrace();
+	            }
+	    }
+
+
+	}

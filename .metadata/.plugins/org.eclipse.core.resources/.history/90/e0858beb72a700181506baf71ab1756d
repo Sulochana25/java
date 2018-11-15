@@ -1,0 +1,124 @@
+package jdbc.crud.console;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class CrudOperations {
+	Scanner scan;
+	Statement statement;
+	PreparedStatement preparedStatement;
+	Connection con;
+	ResultSet resultSet;
+	ResultSetMetaData resultSetMetaData;
+	String table = null;
+	List<String> columnNames;
+	List<String> dataTypes;
+
+	CrudOperations(Connection con) {
+		this.con = con;
+		scan = new Scanner(System.in);
+
+		columnNames = new ArrayList<String>();
+		dataTypes = new ArrayList<String>();
+	}
+
+	void displayTables() {
+		try {
+			statement = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			resultSet = statement.executeQuery("Select * from sys.Tables");
+
+			if (resultSet != null) {
+				System.out.println("Available Tables are:");
+
+				int rowCount = 0;
+				while (resultSet.next()) {
+					System.out.println(++rowCount + ". " + resultSet.getString(1));
+				}
+
+				// Select a table to perform crud operations
+				selectTable(rowCount);
+
+			} else {
+				System.out.println("No tables in the database");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	void selectTable(int rowCount) throws SQLException {
+		System.out.println("Select Table Number:");
+
+		int tableNum;
+		tableNum = scan.nextInt();
+
+		resultSet.absolute(tableNum);
+		table = resultSet.getString(1);
+
+		tableMetaData();
+	}
+
+	void tableMetaData() throws SQLException {
+		resultSet = statement.executeQuery("Select top 1 * from " + table);
+		resultSetMetaData = resultSet.getMetaData();
+
+		System.out.println("Available Columns in Table " + table);
+		int columns = resultSetMetaData.getColumnCount();
+		int column = 1;
+		while (column <= columns) {
+			columnNames.add(resultSetMetaData.getColumnName(column));
+			dataTypes.add(resultSetMetaData.getColumnTypeName(column));
+			System.out.println(resultSetMetaData.getColumnName(column));
+			column++;
+		}
+	}
+
+	void createTable() {
+
+	}
+
+	public void readData() throws SQLException {
+		// read data from table
+		resultSet = statement.executeQuery("select * from " + table);
+
+		System.out.println("Data in " + table);
+
+		for (String column : columnNames) {
+			System.out.print(column + "\t");
+		}
+
+		System.out.println();
+
+		while (resultSet.next()) {
+			for (String column : columnNames) {
+				System.out.print(resultSet.getString(column) + "\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public void insertData() {
+		
+		prepareStatement.
+		
+	}
+
+	public void updateData() {
+
+	}
+
+	public void deleteData() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

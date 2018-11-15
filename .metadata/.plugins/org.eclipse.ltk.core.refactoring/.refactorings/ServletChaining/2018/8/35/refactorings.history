@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;pageredirect&apos;&#x0D;&#x0A;- Original project: &apos;pageredirect&apos;&#x0D;&#x0A;- Original element: &apos;pageredirect/src/com.Servlet.SampleRun&apos;" description="Delete element" element1="/src&lt;com.Servlet.SampleRun" element2="/src&lt;com.Servlet" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1535619896151" subPackages="false" version="1.0"/>
+</session>

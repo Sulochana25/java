@@ -1,0 +1,6 @@
+org\PresentationModule\SignUp.class
+org\PresentationModule\Logout.class
+org\PresentationModule\UserHomePage.class
+org\PresentationModule\LogIn.class
+org\PresentationModule\UploadPost.class
+org\PresentationModule\UpdateDetails.class

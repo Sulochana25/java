@@ -1,0 +1,10 @@
+package jdbc.crud.console;
+
+public class JDBCConsole {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>Filters</display-name>
+  <filter>
+    <filter-name>LoginValidation</filter-name>
+    <filter-class>com.servlets.filters.LoginValidation</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginValidation</filter-name>
+    <url-pattern>/Login</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+  <filter-name>FindLocation</filter-name>
+  <filter-class>com.servlets.filters.FindLocation</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>FindLocation</filter-name>
+  <url-pattern>/Login</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>com.servlets.filters.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>Login.html</welcome-file>
+  </welcome-file-list>
+</web-app>

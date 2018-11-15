@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	setInterval(function displayTime(){
+		
+		$(".ajax-content").load("time.html",function(responseTxt){
+			
+		});
+		
+	},1000);
+	
+		
+});
+</script>
+<div>Hello Ajax</div>
+<div class="ajax-content" style="border:40px solid black">
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+package jdbc.crud.console;
+
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class CrudOperations {
+	Statement statement;
+	PreparedStatement preparedStatement;
+	
+	String displayTables(){
+		statement=
+		
+		return null;		
+	}
+}

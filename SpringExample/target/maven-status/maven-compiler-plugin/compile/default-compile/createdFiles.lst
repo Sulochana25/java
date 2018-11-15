@@ -1,0 +1,4 @@
+com\maven\spring\SpringExample\UnderstandingBeans.class
+com\maven\spring\SpringExample\BeanClass.class
+com\maven\spring\SpringExample\MyBeanPostProcessor.class
+com\maven\spring\SpringExample\App.class

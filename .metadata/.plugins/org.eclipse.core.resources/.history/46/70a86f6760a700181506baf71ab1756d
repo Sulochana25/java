@@ -1,0 +1,40 @@
+package jdbc.crud.console;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CrudOperations {
+	Statement statement;
+	PreparedStatement preparedStatement;
+	Connection con;
+	ResultSet resultSet;
+	String table;
+
+	CrudOperations(Connection con) {
+		this.con = con;
+	}
+
+	void displayTables() {
+		try {
+			statement = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);
+			resultSet = statement.executeQuery("Select * from sys.Tables");
+
+			if (resultSet != null) {
+				System.out.println("Available Tables are:");
+
+				while (resultSet.next()) {
+					System.out.println(resultSet.getString(1));
+				}
+			} else {
+				System.out.println("No tables in the database");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

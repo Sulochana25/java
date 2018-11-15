@@ -1,0 +1,13 @@
+package jdbc.crud.console;
+
+public class MenuDisplay {
+
+	public void displayMenu(Connection con) {
+
+		// Display available tables
+		CrudOperations crudOperations = new CrudOperations(con);
+		String tableName = crudOperations.displayTables();
+
+	}
+
+}

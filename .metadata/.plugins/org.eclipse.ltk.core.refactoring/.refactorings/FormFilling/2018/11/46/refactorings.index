@@ -1,0 +1,13 @@
+1542173896502	Delete element
+1542173898732	Delete element
+1542175386747	Rename package 'com.ggktech.Spring6Example1'
+1542176209237	Rename resource 'spring6example1-servlet.xml'
+1542176370411	Rename type 'Student'
+1542177913706	Rename resource 'FormFilling.xml'
+1542179130085	Rename resource 'student.jsp'
+1542179137625	Rename resource 'student2.jsp'
+1542179152682	Rename resource 'result.jsp'
+1542179856812	Rename type 'StudentValidator1'
+1542179906943	Rename type 'StudentDAO'
+1542179924420	Rename type 'StudentDAOImpl'
+1542180557721	Rename type 'StudentController'

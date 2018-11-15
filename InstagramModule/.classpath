@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="BusinessModule/src/main/java"/>
+	<classpathentry kind="src" path="BusinessModule/src/test/java"/>
+	<classpathentry kind="src" path="CommonUtils/src/main/java"/>
+	<classpathentry kind="src" path="CommonUtils/src/test/java"/>
+	<classpathentry kind="src" path="DAOModule/src/main/java"/>
+	<classpathentry kind="src" path="DAOModule/src/test/java"/>
+	<classpathentry kind="src" path="ServiceModule/src/main/java"/>
+	<classpathentry kind="src" path="ServiceModule/src/test/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

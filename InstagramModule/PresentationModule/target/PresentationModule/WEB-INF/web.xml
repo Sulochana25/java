@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" > -->
+
+<web-app> 
+  <display-name>Archetype Created Web Application</display-name>
+   <servlet>
+  	<servlet-name>LogIn</servlet-name>
+  	<display-name>LogIn</display-name>  	
+  	<servlet-class>org.PresentationModule.LogIn</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>LogIn</servlet-name>
+  	<url-pattern>/LogIn</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<display-name>Logout</display-name>  	
+  	<servlet-class>org.PresentationModule.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+   <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<display-name>SignUp</display-name>  	
+  	<servlet-class>org.PresentationModule.SignUp</servlet-class>
+  </servlet>
+   <servlet>
+   	<servlet-name>UserHomePage</servlet-name>
+   	<display-name>UserHomePage</display-name>
+   	<description></description>
+   	<servlet-class>org.PresentationModule.UserHomePage</servlet-class>
+   </servlet>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserHomePage</servlet-name>
+  	<url-pattern>/UserHomePage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>UpdateDetails</servlet-name>
+  	<display-name>UpdateDetails</display-name>  	
+  	<servlet-class>org.PresentationModule.UpdateDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UpdateDetails</servlet-name>
+  	<url-pattern>/UpdateDetails</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>UploadPost</servlet-name>
+  	<display-name>UploadPost</display-name>  	
+  	<servlet-class>org.PresentationModule.UploadPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UploadPost</servlet-name>
+  	<url-pattern>/UploadPost</url-pattern>
+  </servlet-mapping>
+ <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

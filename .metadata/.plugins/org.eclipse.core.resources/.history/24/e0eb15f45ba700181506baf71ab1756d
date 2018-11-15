@@ -1,0 +1,27 @@
+package jdbc.crud.console;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class JDBCConnection {
+
+	void connectDriver() throws SQLException {
+		try {
+			SQLServerDataSource ds = new SQLServerDataSource();
+
+			ds.setUser("sa");
+			ds.setPassword("Welcome@1234");
+			ds.setServerName("GGKU3SER2");
+			ds.setPortNumber(1433);
+			ds.setDatabaseName("Sulochana");
+
+			Connection con = ds.getConnection();
+			con.close();
+		} catch (SQLException e) {
+			throw new SQLException();
+		}
+
+	}
+}

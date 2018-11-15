@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: sulochana.dhal
+Class-Path: mssql-jdbc-7.0.0.jre8.jar
+Build-Jdk: 1.8.0_151
+Created-By: Maven Integration for Eclipse
+

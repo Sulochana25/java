@@ -1,0 +1,5 @@
+package com.ggktech.spring;
+
+public class HelloController {
+
+}

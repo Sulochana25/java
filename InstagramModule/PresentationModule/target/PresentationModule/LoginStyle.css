@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color:#ebebeb;
+
+}
+.btn-primary{
+	padding-top:0px;
+	padding-bottom:0px;
+	margin-top:5px;
+}

@@ -1,0 +1,5 @@
+package jdbc.crud.console;
+
+public class JDBCConnection {
+
+}

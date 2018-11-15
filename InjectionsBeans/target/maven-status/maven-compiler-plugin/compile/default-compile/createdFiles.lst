@@ -1,0 +1,4 @@
+com\maven\spring\InjectionsBeans\UnderstandingInjections.class
+com\maven\spring\InjectionsBeans\FacultyBean.class
+com\maven\spring\InjectionsBeans\ProfessorBean.class
+com\maven\spring\InjectionsBeans\App.class

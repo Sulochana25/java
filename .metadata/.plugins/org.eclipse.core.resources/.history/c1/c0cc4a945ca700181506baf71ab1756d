@@ -1,0 +1,21 @@
+package jdbc.crud.console;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class CrudOperations {
+	Statement statement;
+	PreparedStatement preparedStatement;
+	Connection con;
+
+	CrudOperations(Connection con){
+		this.con=con;
+	}
+	
+	String displayTables(){
+		statement=
+		
+		return null;		
+	}
+}

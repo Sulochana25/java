@@ -1,0 +1,5 @@
+package com.ggktech.hibernatexml.model;
+
+public class Occupation {
+
+}

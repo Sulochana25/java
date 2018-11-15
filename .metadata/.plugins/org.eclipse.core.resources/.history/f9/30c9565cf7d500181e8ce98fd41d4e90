@@ -1,0 +1,43 @@
+package org.DAOModule;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.servlet.ServletContext;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class SQLConnection {
+
+	private static SQLConnection dbInstance;
+	private static Connection con;
+
+	private SQLConnection() {
+	}
+
+	public static SQLConnection getInstance() {
+		if (dbInstance == null) {
+
+		}
+	}
+
+	public Connection getSQLConnection() {
+		if (con == null) {
+			try {
+
+				SQLServerDataSource ds = new SQLServerDataSource();
+
+				ds.setUser("sa");
+				ds.setPassword("Welcome@1234");
+				ds.setServerName("GGKU3SER2");
+				ds.setPortNumber(1433);
+				ds.setDatabaseName("Sulochana");
+
+				con = ds.getConnection();
+
+			} catch (SQLException e) {
+				System.out.println(e);
+			}
+		}
+	}
+}

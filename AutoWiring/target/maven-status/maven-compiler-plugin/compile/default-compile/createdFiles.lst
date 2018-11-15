@@ -1,0 +1,5 @@
+com\maven\spring\AutoWiring\BeansAutowiring.class
+com\maven\spring\AutoWiring\BeanA.class
+com\maven\spring\AutoWiring\BeanB.class
+com\maven\spring\AutoWiring\App.class
+com\maven\spring\AutoWiring\BeanC.class

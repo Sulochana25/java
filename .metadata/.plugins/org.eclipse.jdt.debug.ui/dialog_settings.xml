@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="82" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2"/>
+	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
+	<item value="229" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
+	<item value="C:\Program Files\Java\jdk1.8.0_151\lib" key="LAST_PATH_SETTING"/>
+	<item value="121" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0"/>
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=DefineUtils/src\/main\/java&amp;lt;com.maven.assignment.useutilsofoneprojectinanother.DefineUtils{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=BuildProfile/src\/main\/java&amp;lt;com.maven.buildprofile.BuildProfile{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=SpringExample/src\/main\/java&amp;lt;com.maven.spring.SpringExample{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=AutoWiring/src\/main\/java&amp;lt;com.maven.spring.AutoWiring{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=InjectionsBeans/src\/main\/java&amp;lt;com.maven.spring.InjectionsBeans{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=UnderstandConstructorInjection/src\/main\/java&amp;lt;com.maven.spring.UnderstandConstructorInjection{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=JavaBasedConfiguration/src\/main\/java&amp;lt;com.maven.spring.JavaBasedConfiguration{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=JavaBasedConfigurationAndEvents/src\/main\/java&amp;lt;com.maven.spring.JavaBasedConfigAndEvents{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="393" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="523" key="DIALOG_HEIGHT"/>
+			<item value="668" key="DIALOG_X_ORIGIN"/>
+			<item value="195" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.jee.server:PresentationModule" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:MVCWorkflow" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:PresentationModule" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:SpringForms" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.wst.web.internal.deployables.static:ResumeUsingBootstrap" serverId="HTTP Preview at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.jee.server:JSPSample" serverId="Tomcat v8.5 Server at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:Spring6Example1" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.wst.web.internal.deployables.static:KeyBoardEvents" serverId="HTTP Preview at localhost (2)"/>
+  <module moduleId="org.eclipse.wst.web.internal.deployables.static:MouseEvents" serverId="HTTP Preview at localhost (2)"/>
+  <module moduleId="org.eclipse.wst.web.internal.deployables.static:JQueryAjax" serverId="HTTP Preview at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.jee.server:Instagram" serverId="Tomcat v8.5 Server at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:FormFilling" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:SampleServlet" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.wst.web.internal.deployables.static:JQuerySelectors" serverId="HTTP Preview at localhost (2)"/>
+  <module moduleId="org.eclipse.wst.web.internal.deployables.static:AjaxExample" serverId="HTTP Preview at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:UIModule" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:UIModule" serverId="Tomcat v8.5 Server at localhost"/>
+</modules>

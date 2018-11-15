@@ -1,0 +1,19 @@
+package jdbc.crud.console;
+
+import java.sql.SQLException;
+
+public class JDBCConsole {
+	public static void main(String[] args) {
+
+		// Connect to driver and JDBC
+		try {
+			JDBCConnection jdbcConnection = new JDBCConnection();
+			jdbcConnection.connectDriver();
+		} catch (SQLException ex) {
+			System.out.println("Cannot connect to driver");
+		}
+
+		MenuDisplay menuDisplay = new MenuDisplay();
+		menuDisplay.displayMenu();
+	}
+}

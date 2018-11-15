@@ -1,0 +1,92 @@
+package com.social.instagram.logic;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+/**
+ * Servlet implementation class GetPosts
+ */
+@WebServlet("/GetPosts")
+public class GetPosts extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	Connection con;
+	ServletContext context;
+
+	public GetPosts() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		try {
+
+			context = getServletContext();
+			con = (Connection) context.getAttribute("connection");
+
+			String jsonString = "";
+			JSONObject jsonobject = null;
+			JSONArray jsonArray = new JSONArray();
+
+			Statement st = con.createStatement();
+			ResultSet resultSet = st.executeQuery(
+					"Select * from posted_pictures where userid=" + (int) request.getSession().getAttribute("userid"));
+			ResultSet userName = st.executeQuery(
+					"Select * from SnapGGKUsers where id=" + (int) request.getSession().getAttribute("userid"));
+			ResultSet displayPicture = st.executeQuery(
+					"Select * from userDetails where userid=" + (int) request.getSession().getAttribute("userid"));
+
+			while (resultSet.next()) {
+
+				ResultSetMetaData metaData = resultSet.getMetaData();
+				jsonobject = new JSONObject();
+
+				for (int i = 0; i < metaData.getColumnCount(); i++) {
+
+					jsonobject.put(metaData.getColumnLabel(i + 1), resultSet.getObject(i + 1));
+
+				}
+				jsonArray.put(jsonobject);
+			}
+			jsonobject.put(userName.getMetaData().getColumnLabel(2), resultSet.getObject(2));
+			jsonobject.put(userName.getMetaData().getColumnLabel(2), resultSet.getObject(2));
+			jsonArray.put(jsonobject);
+
+			jsonobject.put(displayPicture.getMetaData().getColumnLabel(4), resultSet.getObject(4));
+			jsonArray.put(jsonobject);
+
+			if (jsonArray.length() > 0) {
+
+				jsonString = jsonArray.toString();
+
+			}
+			System.out.println(jsonString);
+			response.getWriter().write(jsonString);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

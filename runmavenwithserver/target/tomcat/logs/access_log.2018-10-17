@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [17/Oct/2018:13:29:58 +0530] "GET /runmavenwithserver HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [17/Oct/2018:13:29:59 +0530] "GET /runmavenwithserver/ HTTP/1.1" 200 59 http-bio-8080-exec-2 521
+0:0:0:0:0:0:0:1 - - [17/Oct/2018:13:29:59 +0530] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [17/Oct/2018:13:31:04 +0530] "GET /runmavenwithserver/ HTTP/1.1" 200 143 http-bio-8080-exec-5 70

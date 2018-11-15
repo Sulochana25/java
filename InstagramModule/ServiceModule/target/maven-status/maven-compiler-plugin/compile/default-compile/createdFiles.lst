@@ -1,0 +1,5 @@
+org\ServiceModule\ServiceSignup.class
+org\ServiceModule\ServiceUpdateUserDetails.class
+org\ServiceModule\ServiceUserProfile.class
+org\ServiceModule\ServiceLogin.class
+org\ServiceModule\ServiceUploadUserPost.class

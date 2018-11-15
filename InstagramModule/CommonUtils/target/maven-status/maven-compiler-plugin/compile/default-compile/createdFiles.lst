@@ -1,0 +1,6 @@
+org\CommonUtils\UserDetailsBean.class
+org\CommonUtils\SignUpBean.class
+org\CommonUtils\Constants.class
+org\CommonUtils\NewPostBean.class
+org\CommonUtils\App.class
+org\CommonUtils\LoginBean.class

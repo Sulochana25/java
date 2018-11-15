@@ -1,0 +1,56 @@
+package jdbc.crud.console;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class MenuDisplay {
+	Scanner scan;
+	CrudOperations crudOperations;
+
+	public void displayMenu(Connection con) throws SQLException {
+
+		// Display available tables
+		crudOperations = new CrudOperations(con);
+		crudOperations.displayTables();
+
+		displayOperations();
+
+	}
+
+	private void displayOperations() throws SQLException {
+		System.out.println("<--OPERATIONS-->");
+		System.out.println("1.Create" + "2.Read" + "3.Update" + "4.Delete");
+
+		System.out.println("Choose an option:");
+
+		int option;
+		option = scan.nextInt();
+
+		while (true) {
+			switch (option) {
+			case 1:
+				crudOperations.createTable();
+				break;
+
+			case 2:
+				crudOperations.readData();
+				break;
+
+			case 3:
+				crudOperations.updateData();
+				break;
+
+			case 4:
+				crudOperations.deleteData();
+				break;
+
+			default:
+				System.out.println("Choose correct option");
+				break;
+
+			}
+		}
+	}
+
+}

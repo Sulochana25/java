@@ -1,0 +1,66 @@
+package com.social.instagram.logic;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class LogIn
+ */
+public class LogIn extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	Connection con;
+
+	public LogIn() {
+		super();
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		ServletContext context = getServletContext();
+		con = (Connection) context.getAttribute("connection");
+
+		ResultSet rs;
+		PreparedStatement preparedStatement;
+		String emailid = request.getParameter("emailid");
+		String password = request.getParameter("userpwd");
+
+		try {
+			preparedStatement = con.prepareStatement("select * from SnapGGKUsers where emailid=? and password=?");
+
+			preparedStatement.setString(1, emailid);
+			preparedStatement.setString(2, password);
+
+			rs = preparedStatement.executeQuery();
+
+			// display user profile
+			if (rs.next()) {
+				HttpSession session = request.getSession();
+				session.setAttribute("userid", rs.getInt(1));
+				response.sendRedirect("/Instagram/UserProfile.html");
+			} else {
+				response.sendRedirect("/Instagram/index.html");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

@@ -1,0 +1,21 @@
+package jdbc.crud.console;
+
+import java.sql.Connection;
+
+import com.microsoft.sqlserver.jdbc.*;
+
+public class JDBCConsole {
+
+	public static void main(String[] args) {
+		
+		//Connect to driver and JDBC
+		try{
+		JDBCConnection jdbcConnection =new JDBCConnection();
+		jdbcConnection.connectDriver();
+		}
+		
+		
+
+	}
+
+}

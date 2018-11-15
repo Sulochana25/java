@@ -1,0 +1,93 @@
+@CHARSET "ISO-8859-1";
+
+.btn-primary,.btn-secondary {
+    color: #fff;
+    background-color: darkslateblue;
+    border-color: #007bff;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+.left-sidebar{
+	background-color:#0063c6;
+	color:#000000;
+	text-align:right;
+}
+
+.right-sidebar{
+	background-color:#0063c6;
+	text-align:left;
+}
+.fileinput{
+  position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+.postbutton{
+	 position: relative;
+  overflow: hidden;
+}
+
+#displayPhoto{
+	display:container;
+	width:200px;
+	height:200px;
+	border:1px solid grey;
+}
+
+body {
+    overflow: auto;
+    background-color:#0063c6;
+}
+
+.new-post-div {
+    clear: both;
+    margin:0px;
+}
+
+.logout-button form {
+    float: right;
+}
+
+.user-details {
+    float: right;
+    color:ghostwhite;
+}
+
+.user-name {
+    font-size: 20px;
+    font-color:#ff0000;
+}
+
+.user-image {
+    border-radius: 30px;
+    background-color:white;
+}
+
+.main-content {
+   
+    overflow: auto;
+}
+
+.new-post {
+    width: 100%;
+    height: auto;
+}
+
+.logout-btn {
+	font-size: 20px;
+	color: darkorange;
+	font-weight: bolder;
+}
+    
+.mr-5.row.mb-4.mt-4{
+    background-color:biege;
+}
+
+    

@@ -1,0 +1,21 @@
+package org.DAOModule;
+
+public class SQLConnection {
+
+	private static SQLConnection dbInstance;
+	private static Connection con;
+	
+	private SQLConnection(){}
+	
+	public static SQLConnection getInstance(){
+		if(dbInstance==null){
+			
+		}
+	}
+	
+	public Connection getSQLConnection(){
+		if(con==null){
+			
+		}
+	}
+}
